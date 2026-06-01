@@ -2,9 +2,7 @@
 
 **Décor3D** orchestrates **Remote Service Gateway (RSG)** and Spectacles platform APIs — **Gemini**, **Imagen**, **OpenAI TTS**, **Lens ASR**, **Snap3D**, **SIK**, **World Query**, **Spatial Image**, and the **Camera Module** — into one home-design flow: **scan → understand → redesign → place**.
 
-Where mobile decor apps stop at inspiration images, Décor3D lets you try ideas **in the room you are standing in**: optional repurpose, a layout-aware makeover, decor suggestions with where-to-buy hints, in-scene 3D objects you pinch into place — on the right surface, without fighting the glasses — and a **voice assistant** you can ask anything mid-session.
-
-**Naming:** The public name is **Décor3D**. The code folder and scene objects keep the `DecorAI/` and `DecorAI_*` names so Lens Studio wiring stays stable.
+Where mobile decor apps stop at inspiration images, Décor3D lets you try ideas **in the room you are standing in**: scan and understand the real layout, get a spatial makeover on glasses, generate decor in 3D, place it on the surface that actually fits — and, when two people are in the same room, **share one AI-generated model** instead of paying for it twice.
 
 **Prior Spectacles work:** [decor-assistant-spectacles](https://github.com/urbanpeppermint/decor-assistant-spectacles) (first iteration) → [Enhanced_AI_Decor_Assistant](https://github.com/urbanpeppermint/Enhanced_AI_Decor_Assistant) → **Décor3D** (this repo).
 
@@ -12,17 +10,13 @@ Where mobile decor apps stop at inspiration images, Décor3D lets you try ideas 
 
 ## What this build delivers
 
-- **Room repurpose step** — transform use-case (e.g. bedroom → office) or **Skip** for restyle-only
-- **Expanded style catalog** + SIK scroll UX for styles and purposes
-- **Two-step scan** — frame live, then capture
-- **Layout-aware makeover** — Gemini reads your scan; Imagen follows structured prompts + layout-lock text
-- **Spatial Image** on device — depth payoff on glasses (flat texture fallback in Preview)
-- **Suggestions panel** — multiline decor ideas with where-to-buy hints (text today; structured for shop URLs later)
-- **Suggestion → Generate 3D** — one Snap3D object per slide you choose (phased: preview image → mesh)
-- **Context-aware surface placement** — objects identify themselves and snap to the surface that matches what they are (floors, walls, or ceilings) — not just "nearest surface"
-- **Voice assistant overlay** — mic toggle: ASR → Gemini `models()` → spoken TTS; decor advice, where to buy, or a custom Snap3D request
-- **RESTART** — full session reset (scan, makeover, suggestions, spawned 3D, mic)
-- **Auto-hide** status on Snap3D and generator messages
+- **Colocated co-design** — Connected Lenses + `DecorSessionManager` keep both wearers on the same style, scan phase, analysis, and UI state. Only the **session leader** runs camera capture, Gemini, Imagen, and **one** Snap3D job; the follower does not trigger a second generation.
+- **One GLB, every device** — The leader’s Snap3D result is published as a **shared mesh URL**. The second player **downloads and instantiates that same GLB** locally, with synced loading UI at the shared spawn pose, so both see identical geometry without duplicate API cost or mismatched models.
+- **Live shared placement** — `SyncTransform` streams position, rotation, and scale while either person drags a prop; last interaction wins so co-design feels like one scene, not two parallel lenses.
+- **Duplicate 3D** — After a mesh is ready, **Duplicate 3D** deep-clones the finished interactable at the **original generation anchor** with no second Snap3D round-trip — useful for pairs, symmetry, or repeating a piece you already paid to generate.
+- **Prompt-aware surfaces** — The factory classifies each object from its text (rug vs wall art vs pendant) and picks **floor, wall, or ceiling** World Query paths (including multi-ray wall snap) instead of dropping everything on the nearest hit.
+- **Layout-locked room pipeline** — Gemini vision turns a captured JPEG into structured room analysis and makeover prompts; Imagen renders against that layout; **Spatial Image** adds depth on Spectacles hardware for the in-room makeover plane.
+- **Voice co-pilot** — ASR → Gemini `models()` (with post-scan room context) → OpenAI TTS: decor advice, where-to-buy dialogue, or a spoken Snap3D request that uses the same placement rules as the suggestion panel.
 
 ---
 
