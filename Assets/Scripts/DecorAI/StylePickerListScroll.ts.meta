@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/dec0e107-0000-4000-8000-000000000001>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dec0a007-0000-4000-8000-000000000001
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dec0a007-0000-4000-8000-000000000001
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 5c5b2f16-d511-4df4-b8c6-fea2c3f87f65
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/5c5b2f16-d511-4df4-b8c6-fea2c3f87f65>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 93228014-b67f-43a7-a712-ed905aa95d33
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    listRoot: false
+    rowSpacing: false
+    scrollThumb: false
+    thumbYBottom: false
+    thumbYTop: false
+    visibleRowCount: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - listRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      scrollThumb: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      thumbYTop: -6.500000
+      thumbYBottom: 6.500000
+      rowSpacing: !<float> 8.000000
+      visibleRowCount: !<float> 5.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject listRoot {"hint":"Parent of style rows (PickerRoot)."}'
+    - '// @input SceneObject scrollThumb {"hint":"Draggable thumb (ScrollBarSlider)."}'
+    - '// @input float thumbYTop = -6.5 {"hint":"Thumb local Y when list is at the top."}'
+    - '// @input float thumbYBottom = 6.5 {"hint":"Thumb local Y when list is at the bottom."}'
+    - '// @input float rowSpacing = 6 {"hint":"Must match StylePickerController rowSpacing."}'
+    - '// @input float visibleRowCount = 5 {"hint":"Rows visible before scrolling."}'

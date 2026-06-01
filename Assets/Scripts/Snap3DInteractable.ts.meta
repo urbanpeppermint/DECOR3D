@@ -1,0 +1,150 @@
+- !<AssetImportMetadata/14de37b6-d89c-4775-8ec6-2565a12aa62d>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 01568e2a-eb8f-4ec3-9ccf-beb9f1654199
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 01568e2a-eb8f-4ec3-9ccf-beb9f1654199
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 5c49e498-028b-463f-a595-7e588f56a81b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/5c49e498-028b-463f-a595-7e588f56a81b>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 95fc6844-532b-459b-9635-d2e8af5ed566
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    anchorPivotAtBottom: false
+    baseDisplaySize: false
+    canRotate: false
+    canScale: false
+    canTranslate: false
+    ceilingDropCm: false
+    ceilingMinNormalDownY: false
+    ceilingSnapProximityCm: false
+    colliderObj: false
+    displayPlate: false
+    enableCeilingSnap: false
+    enableSurfaceSnap: false
+    enableWallSnap: false
+    hitTestFilter: false
+    horizontalSurfacesOnly: false
+    img: false
+    mat: false
+    maxScaleFactor: false
+    minHorizontalNormalY: false
+    minScaleFactor: false
+    modelParent: false
+    preserveRotationOnSnap: false
+    promptDisplay: false
+    promptHideDelaySeconds: false
+    resnapOnDrag: false
+    snapProximityCm: false
+    spinner: false
+    surfaceClearanceCm: false
+    surfaceRayLength: false
+    wallClearanceCm: false
+    wallFacingFlip: false
+    wallMaxNormalY: false
+    wallSnapProximityCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - modelParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      img: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      promptDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      spinner: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      mat: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      displayPlate: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      colliderObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      promptHideDelaySeconds: !<float> 4.000000
+      enableSurfaceSnap: true
+      hitTestFilter: true
+      surfaceRayLength: !<float> 200.000000
+      snapProximityCm: !<float> 50.000000
+      horizontalSurfacesOnly: true
+      minHorizontalNormalY: 0.850000
+      preserveRotationOnSnap: true
+      resnapOnDrag: true
+      anchorPivotAtBottom: true
+      surfaceClearanceCm: !<float> 0.000000
+      enableWallSnap: true
+      wallSnapProximityCm: !<float> 50.000000
+      wallMaxNormalY: 0.300000
+      wallClearanceCm: !<float> 2.000000
+      wallFacingFlip: false
+      enableCeilingSnap: true
+      ceilingSnapProximityCm: !<float> 80.000000
+      ceilingMinNormalDownY: 0.850000
+      ceilingDropCm: !<float> 20.000000
+      baseDisplaySize: !<float> 40.000000
+      canTranslate: true
+      canRotate: true
+      canScale: true
+      minScaleFactor: 0.300000
+      maxScaleFactor: !<float> 15.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject modelParent
+    - // @input Component.Image img
+    - // @input Component.Text promptDisplay
+    - // @input SceneObject spinner
+    - // @input Asset.Material mat
+    - // @input SceneObject displayPlate
+    - // @input SceneObject colliderObj
+    - '// @input float promptHideDelaySeconds = 4 {"hint":"Seconds before the floating prompt label is hidden (success or error)."}'
+    - '// @ui {"widget":"group_start", "label":"Surface Snapping"}'
+    - '// @input bool enableSurfaceSnap = true {"hint":"Snap the 3D object to detected surfaces via WorldQueryModule."}'
+    - '// @input bool hitTestFilter = true {"hint":"Smooth/filter the hit-test results for less jitter."}'
+    - '// @input float surfaceRayLength = 200 {"hint":"Max ray length (cm) for initial surface detection (before first place)."}'
+    - '// @input float snapProximityCm = 50 {"hint":"Max distance (cm) to snap to a surface on drag release. No snap if further."}'
+    - '// @input bool horizontalSurfacesOnly = true {"hint":"Only snap to horizontal surfaces (floors/tables). Ignores walls and slopes."}'
+    - '// @input float minHorizontalNormalY = 0.85 {"hint":"Min surface normal Y (1 = flat floor). 0.85 ≈ 32° max slope."}'
+    - '// @input bool preserveRotationOnSnap = true {"hint":"On drag release: keep rotation, only move onto surface at drop X/Z."}'
+    - '// @input bool resnapOnDrag = true {"hint":"Re-snap to surfaces when dragging the object to a new position."}'
+    - '// @input bool anchorPivotAtBottom = true {"hint":"Deprecated — no longer affects placement. Snap height uses half display height + Surface Clearance. Use Surface Clearance (signed) to close the gap."}'
+    - '// @input float surfaceClearanceCm {"hint":"Signed vertical offset (cm) applied after snap. Negative pulls the object DOWN onto the surface, positive lifts it. Lower this toward a negative value to close the gap."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Wall Snapping"}'
+    - '// @input bool enableWallSnap = true {"hint":"Allow wall items (curtains, paintings, wall lamps, mirrors) to snap to nearby walls. Auto-enabled by the factory from the prompt; can also be forced on."}'
+    - '// @input float wallSnapProximityCm = 50 {"hint":"Max distance (cm) to a wall on drag release for the item to snap to it."}'
+    - '// @input float wallMaxNormalY = 0.3 {"hint":"A surface counts as a wall when |normal.y| is below this (0 = perfectly vertical). 0.3 ≈ up to ~17° tilt."}'
+    - '// @input float wallClearanceCm = 2 {"hint":"Signed offset (cm) out from the wall along its normal. Increase if the item clips into the wall; use a small negative to sit flush."}'
+    - '// @input bool wallFacingFlip {"hint":"Flip facing if the item ends up facing INTO the wall instead of into the room."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Ceiling Snapping"}'
+    - '// @input bool enableCeilingSnap = true {"hint":"Allow ceiling items (hanging plants, ceiling/pendant lamps, chandeliers) to snap to the ceiling above. Auto-enabled by the factory from the prompt."}'
+    - '// @input float ceilingSnapProximityCm = 80 {"hint":"Max distance (cm) to the ceiling on drag release for the item to snap up to it."}'
+    - '// @input float ceilingMinNormalDownY = 0.85 {"hint":"A surface counts as a ceiling when its normal points down past this (1 = perfectly flat ceiling). 0.85 ≈ up to ~32° tilt."}'
+    - '// @input float ceilingDropCm = 20 {"hint":"How far (cm) the item hangs BELOW the ceiling hit. Increase for a longer cord/chain."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Display Size"}'
+    - '// @input float baseDisplaySize = 40 {"hint":"Base size (cm) for the 2D preview, collider scale, and center-pivot placement."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Manipulation"}'
+    - '// @input bool canTranslate = true {"hint":"Allow single-hand pinch-drag to move the item."}'
+    - '// @input bool canRotate = true {"hint":"Allow two-hand pinch to rotate the item on its anchor."}'
+    - '// @input bool canScale = true {"hint":"Allow two-hand pinch (spread/pinch) to scale the item."}'
+    - '// @input float minScaleFactor = 0.3 {"hint":"Minimum scale factor (relative to original)."}'
+    - '// @input float maxScaleFactor = 15 {"hint":"Maximum scale factor (relative to original pinch size)."}'
+    - '// @ui {"widget":"group_end"}'

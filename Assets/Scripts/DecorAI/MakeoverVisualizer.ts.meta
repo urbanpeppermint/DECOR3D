@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/dec0e105-0000-4000-8000-000000000001>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dec0a005-0000-4000-8000-000000000001
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dec0a005-0000-4000-8000-000000000001
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> dec0d105-0000-4000-8000-000000000001
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/dec0d105-0000-4000-8000-000000000001>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dec0f105-0000-4000-8000-000000000001
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    imagenAspectRatio: false
+    imagenEnhancePrompt: false
+    imagenModel: false
+    loadingIndicator: false
+    previewFrameRoot: false
+    previewPlane: false
+    spatialImageFrame: false
+    statusText: false
+    swapSpatialWhenReady: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - imagenModel: imagen-3.0-generate-002
+      imagenAspectRatio: "16:9"
+      imagenEnhancePrompt: false
+      spatialImageFrame: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      swapSpatialWhenReady: true
+      previewPlane: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      previewFrameRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      loadingIndicator: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string imagenModel = "imagen-3.0-generate-002" {"hint":"Imagen model id (RSG Imagen proxy)."}'
+    - '// @input string imagenAspectRatio = "16:9" {"hint":"Aspect ratio passed to Imagen. 16:9 reads as a natural room view.", "widget":"combobox", "values":[{"label":"16:9 (wide room view)", "value":"16:9"}, {"label":"4:3 (portrait-leaning)", "value":"4:3"}, {"label":"1:1 (square)", "value":"1:1"}]}'
+    - '// @input bool imagenEnhancePrompt {"hint":"When true, Imagen may rewrite the prompt for “quality” (can drift from your room). Off by default for layout fidelity."}'
+    - '// @input Component.ScriptComponent spatialImageFrame {"hint":"Assign the Spatial Image template ScriptComponent (SikSpatialImageFrame or stock SpatialImage). We call setImage(texture, swap) on it."}'
+    - '// @input bool swapSpatialWhenReady = true {"hint":"When true, asks the spatial frame to swap to its depth-mapped version once the spatializer finishes (~2-4s)."}'
+    - '// @input SceneObject previewPlane {"hint":"Fallback flat preview plane used when no spatial frame is assigned (e.g. in editor)."}'
+    - '// @input SceneObject previewFrameRoot {"hint":"Optional parent of previewPlane (e.g. Scan_preview frame). Visibility only — layout stays as you placed it."}'
+    - '// @input SceneObject loadingIndicator {"hint":"Show this SceneObject while Imagen is generating."}'
+    - '// @input Component.Text statusText {"hint":"Optional Text component used for short status messages."}'

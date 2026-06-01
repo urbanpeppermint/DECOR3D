@@ -1,0 +1,47 @@
+- !<AssetImportMetadata/dec0e10e-0000-4000-8000-000000000001>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dec0a00e-0000-4000-8000-000000000001
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dec0a00e-0000-4000-8000-000000000001
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> dec0d10e-0000-4000-8000-000000000001
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/dec0d10e-0000-4000-8000-000000000001>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dec0f10e-0000-4000-8000-000000000001
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    content: false
+    lockEnabled: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - content: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lockEnabled: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject content {"hint":"Usually the Image child under Scan_preview. If empty, uses the first child."}'
+    - '// @input bool lockEnabled = true {"hint":"When off, this component does nothing."}'

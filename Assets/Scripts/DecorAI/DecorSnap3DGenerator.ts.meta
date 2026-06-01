@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/dec0e10f-0000-4000-8000-000000000001>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dec0a00f-0000-4000-8000-000000000001
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dec0a00f-0000-4000-8000-000000000001
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> dec0d10f-0000-4000-8000-000000000001
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/dec0d10f-0000-4000-8000-000000000001>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dec0f10f-0000-4000-8000-000000000001
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    dismissPreviousOnGenerate: false
+    hideStatusObjectWhenCleared: false
+    snap3DFactory: false
+    statusText: false
+    statusVisibleSeconds: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - snap3DFactory: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      dismissPreviousOnGenerate: true
+      statusVisibleSeconds: !<float> 4.000000
+      hideStatusObjectWhenCleared: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input AssignableType snap3DFactory {"hint":"Scene object with Snap3DInteractableFactory (e.g. Snap3DInteractableFactory in hierarchy)."}'
+    - // @input Component.Text statusText
+    - // @input bool dismissPreviousOnGenerate = true
+    - '// @input float statusVisibleSeconds = 4 {"hint":"How long the status line stays visible, then clears (success or error)."}'
+    - '// @input bool hideStatusObjectWhenCleared = true {"hint":"Hide the status Text object when cleared (not only empty string)."}'

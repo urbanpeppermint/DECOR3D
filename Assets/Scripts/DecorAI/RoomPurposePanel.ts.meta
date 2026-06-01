@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/e9712c5b-2911-45c0-b9cf-7d59cf33a0f5>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 11047d9b-4cc1-4fb7-b965-af865bd623cd
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 11047d9b-4cc1-4fb7-b965-af865bd623cd
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> b1d3552e-0f84-4d57-92a6-85d2593244c9
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/b1d3552e-0f84-4d57-92a6-85d2593244c9>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: aca5fd94-8843-4f53-952e-8bd93b61db62
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    hideDurationSeconds: false
+    panelRoot: false
+    skipButton: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panelRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      skipButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      hideDurationSeconds: 0.400000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject panelRoot {"hint":"Root SceneObject for the whole panel — hidden/shown by controller."}'
+    - '// @input AssignableType skipButton {"hint":"\"Restyle only\" / Skip button — emits null."}'
+    - '// @input float hideDurationSeconds = 0.4 {"hint":"Scale-out duration (seconds)."}'

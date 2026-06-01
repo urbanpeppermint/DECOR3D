@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/0fc89ae2-3e64-4bcf-986e-c338059f00fb>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 7ad79125-5c3c-4439-af6d-0fc5bf2aa728
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 7ad79125-5c3c-4439-af6d-0fc5bf2aa728
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4cb0abf1-1648-4341-bede-d05aaa2caba0
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/4cb0abf1-1648-4341-bede-d05aaa2caba0>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: f4d59ae3-ec14-4fde-a8fd-4a9b68dcd18a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    purposePanel: false
+    rebuildOnStart: false
+    rowHeight: false
+    rowPrefab: false
+    rowWidth: false
+    yStart: false
+    yStep: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - purposePanel: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      rowPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      rebuildOnStart: true
+      yStart: !<float> 0.000000
+      yStep: !<float> 0.000000
+      rowWidth: !<float> 0.000000
+      rowHeight: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input AssignableType purposePanel {"hint":"The RoomPurposePanel — receives selectPurpose() on tap."}'
+    - '// @input Asset.ObjectPrefab rowPrefab {"hint":"Single-row prefab (BaseButton + Text). One instance per purpose."}'
+    - // @input bool rebuildOnStart = true
+    - '// @input float yStart {"hint":"Center Y of the first row (ScreenTransform offset units)."}'
+    - '// @input float yStep {"hint":"Y step per row (negative = downward)."}'
+    - '// @input float rowWidth {"hint":"0 = use default."}'
+    - // @input float rowHeight

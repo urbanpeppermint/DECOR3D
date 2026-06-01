@@ -1,0 +1,55 @@
+- !<AssetImportMetadata/f923f4d4-0df2-4999-9c03-d7525c83a44a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 14d9d5af-f9a1-40a2-8b3f-3096e071bcd1
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 14d9d5af-f9a1-40a2-8b3f-3096e071bcd1
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 5f7453d2-80ba-4287-a104-6cd510ea6e69
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/5f7453d2-80ba-4287-a104-6cd510ea6e69>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3349c1f1-0167-4747-b97f-00e80b1075b5
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    multiplayerButton: false
+    singlePlayerLabel: false
+    statusText: false
+    twoPlayerLabel: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - multiplayerButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      singlePlayerLabel: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      twoPlayerLabel: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"group_start", "label":"2-player toggle"}'
+    - '// @input AssignableType multiplayerButton {"hint":"Button or toggle that flips between 1-player and 2-player mode."}'
+    - '// @input SceneObject singlePlayerLabel {"hint":"Label visible in 1-player mode."}'
+    - '// @input SceneObject twoPlayerLabel {"hint":"Label visible in 2-player mode."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @input Component.Text statusText {"hint":"Short status line (optional — shows single-player / connecting / multiplayer ready)."}'

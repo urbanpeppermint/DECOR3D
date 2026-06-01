@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/dec0e10c-0000-4000-8000-000000000001>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dec0a00c-0000-4000-8000-000000000001
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dec0a00c-0000-4000-8000-000000000001
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> dec0d10c-0000-4000-8000-000000000001
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/dec0d10c-0000-4000-8000-000000000001>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dec0f10c-0000-4000-8000-000000000001
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    blurbText: false
+    hideInlineRowBlurbs: false
+    interactableSearchDepth: false
+    rowsParent: false
+    tooltipOffset: false
+    tooltipRoot: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - rowsParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      tooltipRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      blurbText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      tooltipOffset: !<Vec3> {x: 14.000000, y: 0.000000, z: 0.200000}
+      hideInlineRowBlurbs: true
+      interactableSearchDepth: !<float> 6.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject rowsParent {"hint":"Parent whose direct children are style rows (e.g. PickerRoot / ScrollViewContent)."}'
+    - '// @input SceneObject tooltipRoot {"hint":"Tooltip root (hidden until hover). Position updated next to the row."}'
+    - // @input Component.Text blurbText
+    - '// @input vec3 tooltipOffset = {14,0,0.2} {"hint":"World-space offset from the row origin (e.g. right of the button)."}'
+    - '// @input bool hideInlineRowBlurbs = true {"hint":"Hide the second Text on each row so only the hover tooltip shows blurbs."}'
+    - '// @input float interactableSearchDepth = 6 {"hint":"Max depth when searching row hierarchy for Interactable."}'

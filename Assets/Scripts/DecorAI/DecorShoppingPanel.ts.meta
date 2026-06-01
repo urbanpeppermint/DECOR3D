@@ -1,0 +1,83 @@
+- !<AssetImportMetadata/dec0e10b-0000-4000-8000-000000000001>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dec0a00b-0000-4000-8000-000000000001
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dec0a00b-0000-4000-8000-000000000001
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 5c5b2f16-d511-4df4-b8c6-fea2c3f87f66
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/5c5b2f16-d511-4df4-b8c6-fea2c3f87f66>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dec0f10b-0000-4000-8000-000000000001
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bodyText: false
+    categoryText: false
+    closeButton: false
+    duplicate3dButton: false
+    generate3dButton: false
+    generate3dHintText: false
+    indexText: false
+    nextButton: false
+    openOnCatalogSet: false
+    panelRoot: false
+    prevButton: false
+    snap3dGenerator: false
+    titleText: false
+    whereText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panelRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      titleText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      bodyText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      categoryText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      whereText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      indexText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      prevButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      nextButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      closeButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      openOnCatalogSet: true
+      generate3dButton: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      duplicate3dButton: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      snap3dGenerator: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      generate3dHintText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject panelRoot
+    - // @input Component.Text titleText
+    - // @input Component.Text bodyText
+    - // @input Component.Text categoryText
+    - // @input Component.Text whereText
+    - // @input Component.Text indexText
+    - // @input AssignableType prevButton
+    - // @input AssignableType_1 nextButton
+    - // @input AssignableType_2 closeButton
+    - // @input bool openOnCatalogSet = true
+    - // @input AssignableType_3 generate3dButton
+    - // @input AssignableType_4 duplicate3dButton
+    - // @input AssignableType_5 snap3dGenerator
+    - '// @input Component.Text generate3dHintText {"hint":"Shows which suggestion the 3D button will use (optional)."}'

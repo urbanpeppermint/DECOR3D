@@ -1,0 +1,74 @@
+- !<AssetImportMetadata/6ecd9b42-4a82-470d-99ab-7295f53f7489>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 99550236-c6e6-4454-8f0d-e08ed81d3527
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 99550236-c6e6-4454-8f0d-e08ed81d3527
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 77be058e-8137-4b2b-b29c-ade35a69c753
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/77be058e-8137-4b2b-b29c-ade35a69c753>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: cccd4912-72d4-4412-a389-3bdd79a325ea
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    decorGeminiVoice: false
+    greeting: false
+    instructions: false
+    micButton: false
+    micOffObject: false
+    micOnObject: false
+    resultText: false
+    snap3DFactory: false
+    statusText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - micButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      micOnObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      micOffObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      resultText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      decorGeminiVoice: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      snap3DFactory: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      instructions: ""
+      greeting: ""
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"group_start", "label":"Mic toggle"}'
+    - '// @input AssignableType micButton {"hint":"Button that toggles the voice assistant on/off. First press also opens the session."}'
+    - '// @input SceneObject micOnObject {"hint":"Optional object shown while listening (mic ON state)."}'
+    - '// @input SceneObject micOffObject {"hint":"Optional object shown while idle (mic OFF state)."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Output UI"}'
+    - '// @input Component.Text resultText {"hint":"Text that shows the assistant reply / suggestions / where-to-buy answers."}'
+    - '// @input Component.Text statusText {"hint":"Optional small status line (Listening… / Tap to talk)."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Assistant engine"}'
+    - '// @input AssignableType_1 decorGeminiVoice {"hint":"Gemini.models() voice brain — assign DecorGeminiVoice, NOT AI Playground Gemini Live."}'
+    - '// @input AssignableType_2 snap3DFactory {"hint":"Factory used to generate 3D objects the assistant is asked to create."}'
+    - '// @input string instructions {"hint":"System persona pushed to Gemini before each models() call.", "widget":"text_area"}'
+    - '// @input string greeting {"hint":"Spoken opener when the session first starts (after the mic is pressed).", "widget":"text_area"}'
+    - '// @ui {"widget":"group_end"}'

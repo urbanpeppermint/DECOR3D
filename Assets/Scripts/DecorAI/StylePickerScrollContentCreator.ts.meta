@@ -1,0 +1,78 @@
+- !<AssetImportMetadata/dec0e108-0000-4000-8000-000000000001>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dec0a008-0000-4000-8000-000000000001
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dec0a008-0000-4000-8000-000000000001
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> dec0d108-0000-4000-8000-000000000001
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/dec0d108-0000-4000-8000-000000000001>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dec0f108-0000-4000-8000-000000000001
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    contentPaddingTop: false
+    rebuildOnStart: false
+    rowHeight: false
+    rowWidth: false
+    snapContentTopOnRefresh: false
+    stylePickerController: false
+    styleRowPrefab: false
+    styleRowPrefabs: false
+    styleRowsHolderPrefab: false
+    syncLayoutFromController: false
+    yOffset: false
+    yStart: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - stylePickerController: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      styleRowsHolderPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      styleRowPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      styleRowPrefabs: !<reference.ObjectPrefab[]>
+        []
+      rebuildOnStart: true
+      yStart: !<float> 0.000000
+      yOffset: -5.400000
+      syncLayoutFromController: true
+      contentPaddingTop: !<float> 0.000000
+      rowWidth: !<float> 32.000000
+      rowHeight: 5.400000
+      snapContentTopOnRefresh: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input AssignableType stylePickerController
+    - // @input Asset.ObjectPrefab styleRowsHolderPrefab
+    - // @input Asset.ObjectPrefab styleRowPrefab
+    - "// @input Asset.ObjectPrefab[] styleRowPrefabs = {}"
+    - // @input bool rebuildOnStart = true
+    - '// @input float yStart {"hint":"First row center Y. Ignored when syncLayoutFromController is on — use StylePickerController scrollItemYStart instead."}'
+    - '// @input float yOffset {"hint":"Y step per row (negative = list grows downward)."}'
+    - '// @input bool syncLayoutFromController = true {"hint":"When on, row layout uses StylePickerController scrollItemYStart / scrollItemYStep / scrollRowHeight / scrollRowWidth."}'
+    - '// @input float contentPaddingTop {"hint":"Extra space above row 0 inside the scroll content (local Y)."}'
+    - '// @input float rowWidth {"hint":"0 = match ScrollView viewport width."}'
+    - // @input float rowHeight
+    - '// @input bool snapContentTopOnRefresh {"hint":"Off = only recompute scroll bounds (keeps yStart padding). On = SIK snap content top to viewport (clips first row)."}'

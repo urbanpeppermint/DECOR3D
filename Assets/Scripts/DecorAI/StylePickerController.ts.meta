@@ -1,0 +1,180 @@
+- !<AssetImportMetadata/dec0e102-0000-4000-8000-000000000001>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dec0a002-0000-4000-8000-000000000001
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dec0a002-0000-4000-8000-000000000001
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> dec0d102-0000-4000-8000-000000000001
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/dec0d102-0000-4000-8000-000000000001>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dec0f102-0000-4000-8000-000000000001
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    blurbHover: false
+    bohoBlurb: false
+    bohoButton: false
+    bohoLabel: false
+    eclecticBlurb: false
+    eclecticButton: false
+    eclecticLabel: false
+    hideDurationSeconds: false
+    industrialBlurb: false
+    industrialButton: false
+    industrialLabel: false
+    japandiBlurb: false
+    japandiButton: false
+    japandiLabel: false
+    listScroll: false
+    mediterraneanBlurb: false
+    mediterraneanButton: false
+    mediterraneanLabel: false
+    midcenturyBlurb: false
+    midcenturyButton: false
+    midcenturyLabel: false
+    minimalistBlurb: false
+    minimalistButton: false
+    minimalistLabel: false
+    modernFarmhouseBlurb: false
+    modernFarmhouseButton: false
+    modernFarmhouseLabel: false
+    pickerRoot: false
+    rebuildPrefabRowsOnStart: false
+    rowSpacing: false
+    rowYStart: false
+    scandinavianBlurb: false
+    scandinavianButton: false
+    scandinavianLabel: false
+    scrollItemYStart: false
+    scrollItemYStep: false
+    scrollRowHeight: false
+    scrollRowWidth: false
+    scrollStyleRowsParent: false
+    styleButtonBindingMode: false
+    styleRowPrefab: false
+    useWorldSpaceRows: false
+    vintageBlurb: false
+    vintageButton: false
+    vintageLabel: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - styleButtonBindingMode: explicit
+      pickerRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      scrollStyleRowsParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      useWorldSpaceRows: true
+      rowYStart: !<float> 36.000000
+      rowSpacing: !<float> 8.000000
+      listScroll: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      scrollItemYStart: !<float> 0.000000
+      scrollItemYStep: -5.400000
+      scrollRowWidth: !<float> 32.000000
+      scrollRowHeight: 5.400000
+      styleRowPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      rebuildPrefabRowsOnStart: false
+      scandinavianButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      vintageButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      industrialButton: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      midcenturyButton: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      japandiButton: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      modernFarmhouseButton: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
+      bohoButton: !<MappingBased.AssignableType_7> 00000000-0000-0000-0000-000000000000
+      minimalistButton: !<MappingBased.AssignableType_8> 00000000-0000-0000-0000-000000000000
+      mediterraneanButton: !<MappingBased.AssignableType_9> 00000000-0000-0000-0000-000000000000
+      eclecticButton: !<MappingBased.AssignableType_10> 00000000-0000-0000-0000-000000000000
+      scandinavianLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      scandinavianBlurb: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      vintageLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      vintageBlurb: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      industrialLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      industrialBlurb: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      midcenturyLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      midcenturyBlurb: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      japandiLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      japandiBlurb: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      modernFarmhouseLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      modernFarmhouseBlurb: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      bohoLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      bohoBlurb: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      minimalistLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      minimalistBlurb: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      mediterraneanLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      mediterraneanBlurb: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      eclecticLabel: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      eclecticBlurb: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      blurbHover: !<MappingBased.AssignableType_11> 00000000-0000-0000-0000-000000000000
+      hideDurationSeconds: 0.450000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string styleButtonBindingMode = "explicit" {"hint":"SIK: Scroll list + prefab rows under ScrollView content. Explicit = per-slot buttons.", "widget":"combobox", "values":[{"label":"Explicit (inspector slot per style)", "value":"explicit"}, {"label":"Scroll list (row children = styles in order)", "value":"scrollChildren"}]}'
+    - '// @input SceneObject pickerRoot {"hint":"Root scaled to zero after a pick (usually the whole picker + scroll chrome)."}'
+    - '// @input SceneObject scrollStyleRowsParent {"hint":"Parent of style row objects (e.g. PickerRoot). Children are stacked on local Y."}'
+    - '// @input bool useWorldSpaceRows = true {"hint":"Off = SIK ScrollView row layout (ScreenTransform + offsets). On = Transform stack + StylePickerListScroll."}'
+    - '// @input float rowYStart = 8 {"hint":"Local Y for row 0 (first style)."}'
+    - '// @input float rowSpacing = 6 {"hint":"Local Y step per row (downward)."}'
+    - '// @input AssignableType listScroll {"hint":"Optional — refreshed after rows spawn so thumb scroll range is correct."}'
+    - '// @input float scrollItemYStart {"hint":"SIK row 0 center Y when StylePickerScrollContentCreator syncLayoutFromController is on."}'
+    - '// @input float scrollItemYStep = -5.4 {"hint":"Legacy SIK ScrollView: vertical step per row."}'
+    - '// @input float scrollRowWidth = 32 {"hint":"Legacy SIK ScrollView: row width (offsets)."}'
+    - '// @input float scrollRowHeight = 5.4 {"hint":"Legacy SIK ScrollView: row height (offsets)."}'
+    - '// @input Asset.ObjectPrefab styleRowPrefab {"hint":"Scroll list: one prefab instance per style under scrollStyleRowsParent (leave empty if rows are already in the scene)."}'
+    - '// @input bool rebuildPrefabRowsOnStart {"hint":"Scroll list: destroy all children of scrollStyleRowsParent then recreate from styleRowPrefab (uses catalog count)."}'
+    - '// @ui {"widget":"group_start", "label":"Buttons (explicit mode only)"}'
+    - // @input AssignableType_1 scandinavianButton
+    - // @input AssignableType_2 vintageButton
+    - // @input AssignableType_3 industrialButton
+    - // @input AssignableType_4 midcenturyButton
+    - // @input AssignableType_5 japandiButton
+    - // @input AssignableType_6 modernFarmhouseButton
+    - // @input AssignableType_7 bohoButton
+    - // @input AssignableType_8 minimalistButton
+    - // @input AssignableType_9 mediterraneanButton
+    - // @input AssignableType_10 eclecticButton
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Optional label + blurb Text (explicit mode; filled from catalog at start)"}'
+    - // @input Component.Text scandinavianLabel
+    - // @input Component.Text scandinavianBlurb
+    - // @input Component.Text vintageLabel
+    - // @input Component.Text vintageBlurb
+    - // @input Component.Text industrialLabel
+    - // @input Component.Text industrialBlurb
+    - // @input Component.Text midcenturyLabel
+    - // @input Component.Text midcenturyBlurb
+    - // @input Component.Text japandiLabel
+    - // @input Component.Text japandiBlurb
+    - // @input Component.Text modernFarmhouseLabel
+    - // @input Component.Text modernFarmhouseBlurb
+    - // @input Component.Text bohoLabel
+    - // @input Component.Text bohoBlurb
+    - // @input Component.Text minimalistLabel
+    - // @input Component.Text minimalistBlurb
+    - // @input Component.Text mediterraneanLabel
+    - // @input Component.Text mediterraneanBlurb
+    - // @input Component.Text eclecticLabel
+    - // @input Component.Text eclecticBlurb
+    - '// @ui {"widget":"group_end"}'
+    - '// @input AssignableType_11 blurbHover {"hint":"Optional hover tooltip for row blurbs (SIK Interactable on each row)."}'
+    - '// @input float hideDurationSeconds = 0.45 {"hint":"Duration (seconds) of the scale-out animation when the picker hides."}'

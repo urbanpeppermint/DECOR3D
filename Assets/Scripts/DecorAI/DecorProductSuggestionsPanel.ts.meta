@@ -1,0 +1,80 @@
+- !<AssetImportMetadata/f7a8b9c0-d1e2-4f3a-8b5c-6d7e8f9a0b1c>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e8b9c0d1-e2f3-4a4b-9c6d-7e8f9a0b1c2d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e8b9c0d1-e2f3-4a4b-9c6d-7e8f9a0b1c2d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> d9c0d1e2-f3a4-4b5c-ad7e-8f9a0b1c2d3e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/d9c0d1e2-f3a4-4b5c-ad7e-8f9a0b1c2d3e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: c0d1e2f3-a4b5-4c6d-be8f-9a0b1c2d3e4f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    categoryText: false
+    closeButton: false
+    descriptionText: false
+    generateImages: false
+    imagenModel: false
+    indexText: false
+    nextButton: false
+    openButton: false
+    panelRoot: false
+    prevButton: false
+    previewImage: false
+    shopHintText: false
+    titleText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panelRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      previewImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      titleText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      descriptionText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      shopHintText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      categoryText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      indexText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      prevButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      nextButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      closeButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      openButton: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      generateImages: true
+      imagenModel: imagen-3.0-generate-002
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject panelRoot {"hint":"Root scaled in when showing shop ideas (popup frame)."}'
+    - // @input Component.Image previewImage
+    - // @input Component.Text titleText
+    - // @input Component.Text descriptionText
+    - // @input Component.Text shopHintText
+    - // @input Component.Text categoryText
+    - // @input Component.Text indexText
+    - // @input AssignableType prevButton
+    - // @input AssignableType_1 nextButton
+    - // @input AssignableType_2 closeButton
+    - // @input AssignableType_3 openButton
+    - '// @input bool generateImages = true {"hint":"Generate a small product photo per item when shown."}'
+    - '// @input string imagenModel = "imagen-3.0-generate-002"'

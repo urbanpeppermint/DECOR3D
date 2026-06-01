@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/dec0e106-0000-4000-8000-000000000001>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dec0a006-0000-4000-8000-000000000001
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dec0a006-0000-4000-8000-000000000001
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> dec0d106-0000-4000-8000-000000000001
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/dec0d106-0000-4000-8000-000000000001>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dec0f106-0000-4000-8000-000000000001
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    audioOutput: false
+    loadingIndicator: false
+    maxSpokenChars: false
+    voice: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - voice: nova
+      maxSpokenChars: !<float> 480.000000
+      loadingIndicator: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      audioOutput: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string voice = "nova" {"hint":"OpenAI TTS voice. `nova` is calm and clear; `coral` is warmer.", "widget":"combobox", "values":[{"label":"Nova (calm, clear) — recommended", "value":"nova"}, {"label":"Coral (warm, friendly)", "value":"coral"}, {"label":"Alloy (neutral)", "value":"alloy"}, {"label":"Echo (low, calm)", "value":"echo"}, {"label":"Fable (story-teller)", "value":"fable"}, {"label":"Onyx (deep)", "value":"onyx"}, {"label":"Shimmer (bright)", "value":"shimmer"}]}'
+    - '// @input float maxSpokenChars = 480 {"hint":"Maximum characters spoken out loud. Keeps the round-trip cheap and stops monologues."}'
+    - '// @input SceneObject loadingIndicator {"hint":"Show this SceneObject while the TTS round-trip is in flight."}'
+    - '// @input Component.AudioComponent audioOutput {"hint":"Optional pre-existing AudioComponent. If unset, one is created on this SceneObject lazily."}'

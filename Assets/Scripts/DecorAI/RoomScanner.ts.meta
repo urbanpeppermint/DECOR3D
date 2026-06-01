@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/dec0e103-0000-4000-8000-000000000001>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dec0a003-0000-4000-8000-000000000001
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dec0a003-0000-4000-8000-000000000001
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> dec0d103-0000-4000-8000-000000000001
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/dec0d103-0000-4000-8000-000000000001>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dec0f103-0000-4000-8000-000000000001
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    encodeQuality: false
+    loadingIndicator: false
+    preserveEditorTransform: false
+    previewFrameRoot: false
+    previewImage: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - encodeQuality: medium
+      loadingIndicator: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      previewImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      previewFrameRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      preserveEditorTransform: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string encodeQuality = "medium" {"hint":"JPEG compression quality used when encoding the captured frame for Gemini.", "widget":"combobox", "values":[{"label":"Low (smaller upload, faster)", "value":"low"}, {"label":"Medium (recommended)", "value":"medium"}, {"label":"High (best vision quality)", "value":"high"}]}'
+    - '// @input SceneObject loadingIndicator {"hint":"Show this SceneObject while capture is in-flight (e.g. a loading spinner)."}'
+    - '// @input Component.Image previewImage {"hint":"Optional Image plane: hidden until live preview or result; shows camera feed then still."}'
+    - '// @input SceneObject previewFrameRoot {"hint":"Optional parent (e.g. ContainerFrame). Only visibility is toggled — your position/scale in the scene are kept."}'
+    - '// @input bool preserveEditorTransform = true {"hint":"When on, scripts never reset preview scale/position (recommended)."}'

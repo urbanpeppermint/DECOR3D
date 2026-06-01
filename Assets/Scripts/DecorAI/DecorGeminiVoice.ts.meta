@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/c40427c0-e838-480d-af5d-6131fd72a273>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 81631182-be05-447f-9de3-064a37e76653
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 81631182-be05-447f-9de3-064a37e76653
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 99b71632-181b-4701-a5ac-d54eb6abdcea
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/99b71632-181b-4701-a5ac-d54eb6abdcea>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 8651379e-573d-4cef-bd4f-715c5d1324d8
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    geminiModel: false
+    statusText: false
+    ttsNarrator: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - geminiModel: gemini-2.0-flash
+      ttsNarrator: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string geminiModel = "gemini-2.0-flash" {"hint":"Gemini model for voice turns (e.g. gemini-2.0-flash)."}'
+    - '// @input AssignableType ttsNarrator {"hint":"Speaks assistant replies on device (Travel-style TTS)."}'
+    - // @input Component.Text statusText

@@ -1,0 +1,119 @@
+- !<AssetImportMetadata/dec0e101-0000-4000-8000-000000000001>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dec0a001-0000-4000-8000-000000000001
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dec0a001-0000-4000-8000-000000000001
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> dec0d101-0000-4000-8000-000000000001
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/dec0d101-0000-4000-8000-000000000001>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dec0f101-0000-4000-8000-000000000001
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoNarrate: false
+    backToMenuButton: false
+    backToMenuRoot: false
+    captureRoomButton: false
+    captureRoomRoot: false
+    decorGeminiVoice: false
+    hideScanAfterTrigger: false
+    makeoverVisualizer: false
+    maxSuggestionsRendered: false
+    purposePanel: false
+    purposePanelRoot: false
+    roomAnalyzer: false
+    roomScanner: false
+    scanRoomButton: false
+    scanRoomRoot: false
+    shoppingPanel: false
+    showDurationSeconds: false
+    snap3dGenerator: false
+    statusText: false
+    styleLabelText: false
+    stylePicker: false
+    suggestionsText: false
+    ttsNarrator: false
+    twoStepRoomCapture: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - stylePicker: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      roomScanner: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      roomAnalyzer: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      makeoverVisualizer: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      ttsNarrator: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      decorGeminiVoice: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      scanRoomRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      scanRoomButton: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
+      captureRoomRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      captureRoomButton: !<MappingBased.AssignableType_7> 00000000-0000-0000-0000-000000000000
+      twoStepRoomCapture: true
+      statusText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      suggestionsText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      styleLabelText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      hideScanAfterTrigger: true
+      showDurationSeconds: 0.400000
+      shoppingPanel: !<MappingBased.AssignableType_8> 00000000-0000-0000-0000-000000000000
+      backToMenuRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      backToMenuButton: !<MappingBased.AssignableType_9> 00000000-0000-0000-0000-000000000000
+      snap3dGenerator: !<MappingBased.AssignableType_10> 00000000-0000-0000-0000-000000000000
+      purposePanel: !<MappingBased.AssignableType_11> 00000000-0000-0000-0000-000000000000
+      purposePanelRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      autoNarrate: true
+      maxSuggestionsRendered: !<float> 5.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"group_start", "label":"Modules"}'
+    - '// @input AssignableType stylePicker {"hint":"Style picker shown at the start."}'
+    - '// @input AssignableType_1 roomScanner {"hint":"Room camera + JPEG encode."}'
+    - '// @input AssignableType_2 roomAnalyzer {"hint":"Gemini vision → structured analysis JSON."}'
+    - '// @input AssignableType_3 makeoverVisualizer {"hint":"Imagen → Spatial Image makeover."}'
+    - '// @input AssignableType_4 ttsNarrator {"hint":"OpenAI TTS for the spoken summary."}'
+    - '// @input AssignableType_5 decorGeminiVoice {"hint":"Optional — receives room scan context for voice Q&A after analysis."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"UI"}'
+    - '// @input SceneObject scanRoomRoot {"hint":"SceneObject root for the \"scan room\" button — hidden until a style is picked."}'
+    - '// @input AssignableType_6 scanRoomButton {"hint":"Opens live camera preview (two-step) or captures immediately (one-step)."}'
+    - '// @input SceneObject captureRoomRoot {"hint":"SceneObject root for the \"capture\" button — only used in two-step mode."}'
+    - '// @input AssignableType_7 captureRoomButton {"hint":"Commits the still JPEG after the user has aimed (two-step mode)."}'
+    - '// @input bool twoStepRoomCapture = true {"hint":"When true (and capture UI assigned): Scan = live preview, Capture = shutter."}'
+    - '// @input Component.Text statusText {"hint":"Optional single-line status."}'
+    - '// @input Component.Text suggestionsText {"hint":"Optional multiline: room summary + ranked suggestions from Gemini."}'
+    - '// @input Component.Text styleLabelText {"hint":"Optional picked style label."}'
+    - '// @input bool hideScanAfterTrigger = true {"hint":"Hide the scan affordance after a successful shutter (two-step: after capture, not after opening preview)."}'
+    - '// @input float showDurationSeconds = 0.4 {"hint":"Fade-in duration (seconds) when the scan button appears."}'
+    - '// @input AssignableType_8 shoppingPanel {"hint":"Shopping popup — product cards after analysis."}'
+    - '// @input SceneObject backToMenuRoot {"hint":"Back-to-menu control — shown only after a style is picked."}'
+    - '// @input AssignableType_9 backToMenuButton {"hint":"Pinch to RESTART — full soft reset (style menu, scan, 3D, shopping, status text)."}'
+    - '// @input AssignableType_10 snap3dGenerator {"hint":"Optional — dismissed when returning to menu."}'
+    - '// @input AssignableType_11 purposePanel {"hint":"Room-purpose transform panel — shown between style pick and scan."}'
+    - '// @input SceneObject purposePanelRoot {"hint":"SceneObject root for the purpose panel — hidden/shown by controller."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"group_start", "label":"Auto-narration"}'
+    - '// @input bool autoNarrate = true {"hint":"Play TTS when analysis is ready."}'
+    - '// @input float maxSuggestionsRendered = 5 {"hint":"Max suggestions rendered into `suggestionsText`."}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/dec0c010-0000-4000-8000-000000000001>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dec0c001-0000-4000-8000-000000000002
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dec0c001-0000-4000-8000-000000000002
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> dec0c011-0000-4000-8000-000000000001
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/dec0c011-0000-4000-8000-000000000001>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dec0c012-0000-4000-8000-000000000001
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    decorController: false
+    instantiator: false
+    snap3dPrefab: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - decorController: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      instantiator: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      snap3dPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input AssignableType decorController
+    - '// @input AssignableType_1 instantiator {"hint":"Network spawner — assign ColocatedWorld Instantiator with Snap3DInteractable prefab."}'
+    - '// @input Asset.ObjectPrefab snap3dPrefab {"hint":"Same prefab as Snap3DInteractableFactory.snap3DInteractablePrefab."}'
