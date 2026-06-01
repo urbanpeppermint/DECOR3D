@@ -120,8 +120,6 @@ On first press the assistant speaks a short greeting (TTS), then starts listenin
 
 **Implementation:** `DecorVoiceAssistant.ts` owns the mic toggle, ASR, and Snap3D routing. `DecorGeminiVoice.ts` owns Gemini chat history and the Snap3D tool declaration. Voice-requested items use the same prompt-based surface classification as suggestion-driven ones.
 
-The AI Playground **`GeminiAssistant.ts`** (Gemini Live sample) lives under **AI Models → Gemini Live** in the scene and is **disabled** by default — it is not part of the Décor voice path.
-
 ---
 
 ## RSG & platform stack
@@ -225,8 +223,8 @@ flowchart TB
 | `Snap3DInteractableFactory.ts` | RSG Snap3D submit + surface class detection |
 | `Snap3DInteractable.ts` | Phased preview → mesh, floor/wall/ceiling snap, SIK manipulation |
 | `DecorVoiceAssistant.ts` | Mic toggle, ASR, wires `DecorGeminiVoice` + Snap3D factory |
-| `GeminiAssistant.ts` | Optional AI Playground Gemini Live sample (disabled in scene) |
-| `OpenAIAssistant.ts` | Optional AI Playground OpenAI Realtime sample (not used by Décor voice) |
+| `DecorSessionManager.ts` | Connected Lens sync — phase, analysis, Snap3D, shared transforms |
+| `DecorMultiplayerController.ts` | 1-player / 2-player toggle → starts colocated session |
 
 ---
 
@@ -240,14 +238,14 @@ New_DecorAI/
 │   ├── Prefabs/Snap3DInteractable.prefab
 │   └── Scripts/
 │       ├── DecorAI/              ← Décor3D module (folder name unchanged)
+│       │   ├── DecorController.ts
+│       │   ├── DecorSessionManager.ts
+│       │   ├── DecorMultiplayerController.ts
 │       │   ├── DecorVoiceAssistant.ts
 │       │   ├── DecorGeminiVoice.ts
 │       │   └── …
 │       ├── Snap3DInteractable.ts
-│       ├── Snap3DInteractableFactory.ts
-│       │   ├── DecorMultiplayerController.ts  ← 1-player / 2-player toggle
-│       ├── GeminiAssistant.ts
-│       └── OpenAIAssistant.ts
+│       └── Snap3DInteractableFactory.ts
 └── Tools/
 ```
 
@@ -266,50 +264,15 @@ Scroll / prefab / voice wiring details: [`Assets/Scripts/DecorAI/README.md`](Ass
 
 ---
 
-## Colocated multiplayer (Connected Lenses)
+## Colocated multiplayer (optional)
 
-Multiple users in the same room can move the same Snap3D objects together. **Default is 1-player**; a UI toggle starts the colocated session only when you want 2-player.
+Two people in the **same physical room** can share scan results, one leader-run Snap3D job, and live placement of the same objects (**Connected Lenses** + **Spectacles Sync Kit**). Default is **1-player**; the in-lens toggle starts colocated mode when you want a second device in the session.
 
-### What is already in the scene
+**Lens Studio:** two Spectacles (2024) preview panels with **Multiplayer** enabled, then toggle 2-player and move a shared object.
 
-After importing **Spectacles Sync Kit**, the hierarchy includes (do not delete):
+**Spectacles:** toggle 2-player, complete room mapping, share Snapcode with the second wearer.
 
-| Object | What it is |
-|--------|------------|
-| **SpectaclesSyncKit** | Package root (SceneObjects + examples) |
-| **SessionController [CONFIGURE_ME]** | `SessionControllerComponent` — wires modules, **Start Mode = OFF** (no auto menu) |
-| **ColocatedWorld [CONFIGURE_ME]** | Shared world / mapping anchor for colocated play |
-| **Connected Lens Module** | **Asset Browser** module (not draggable into the hierarchy) — already linked on SessionController |
-
-You were right: **Connected Lens Module is not a SceneObject** — it lives under **Asset Browser → Spectacles Sync Kit** and is assigned on `SessionControllerComponent → Connected Lens Module`.
-
-### One-time wiring in Lens Studio
-
-1. Add **`DecorMultiplayerController`** to your UI root (e.g. near `DecorVoiceAssistant`).
-2. Assign a **toggle button** to `multiplayerButton` (same SIK `BaseButton` pattern as the mic).
-3. Optional: assign `singlePlayerLabel` / `twoPlayerLabel` / `statusText`.
-4. On **SessionController [CONFIGURE_ME] → SessionControllerComponent**, confirm **Start Mode = OFF** (so the Sync Kit menu does not appear until your toggle runs).
-5. **Snap3DInteractable.prefab** already includes **SyncTransform** (disabled). It turns on only when 2-player is active and you spawn an object.
-6. You can delete the stray **Snap3DSyncTransform** example object under SpectaclesSyncKit if Lens Studio still shows it (leftover from an earlier script).
-
-### How it works
-
-1. Lens runs in **1-player** — no Connected Lens session, objects are local.
-2. User toggles **2-player ON** → `DecorMultiplayerController` calls `SessionController.init()` directly (bypassing the StartModeController, which lives in a disabled part of the SpectaclesSyncKit hierarchy). The Sync Kit mapping UI appears — user maps the room.
-3. When the session is ready, all pending and new **Generate 3D** objects get **SyncTransform** enabled, so position/rotation/scale sync in real-time.
-4. Toggle **OFF** → new objects stay local again (session keeps running until Lens restarts).
-
-### Testing
-
-**Lens Studio:** two Preview panels → Spectacles (2024) → **Multiplayer** on both → toggle 2-player ON → generate and move an object in one preview.
-
-**Spectacles:** toggle 2-player ON → map → share Snapcode → friend scans → both move the same props.
-
-### References
-
-- [Connected Lenses Overview](https://developers.snap.com/lens-studio/features/connected-lenses/connected-lenses-overview)
-- [Building Connected Lenses](https://developers.snap.com/spectacles/about-spectacles-features/connected-lenses/building-connected-lenses#configuring-session-id)
-- [Spectacles Sync Kit sample](https://github.com/Snapchat/Spectacles-Sample/tree/main/Spectacles%20Sync%20Kit)
+Wiring and session details: [`Assets/Scripts/DecorAI/README.md`](Assets/Scripts/DecorAI/README.md) (Colocated multiplayer).
 
 ---
 
@@ -332,7 +295,6 @@ You were right: **Connected Lens Module is not a SceneObject** — it lives unde
 - Live nearby-store lookup via a search/Maps API + voice function tool
 - Tap region on makeover → crop → dedicated Snap3D prompt
 - Ownership handoff (pinch to "grab" from another user)
-- Remote multiplayer (sync objects across distant users via chat invite)
 
 ---
 
