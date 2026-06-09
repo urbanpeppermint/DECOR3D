@@ -1,0 +1,24 @@
+Décor3D for Spectacles
+Copyright 2026 urbanpeppermint
+
+This project is licensed under the Apache License, Version 2.0.
+See the LICENSE file for the full license text.
+
+Third-party components
+----------------------
+
+This Lens integrates packages and platform APIs from the Lens Studio Asset
+Library and Snap Spectacles ecosystem, including but not limited to:
+
+  - Remote Service Gateway (RSG)
+  - Spectacles Interaction Kit (SIK)
+  - Spectacles UI Kit
+  - Spectacles Sync Kit
+  - Spatial Image
+
+Those components remain subject to their own licenses and terms from Snap Inc.
+and other licensors. They are not relicensed under Apache-2.0 by this
+repository alone.
+
+Prior public iterations of this work were published as decor-assistant-spectacles
+and Enhanced_AI_Decor_Assistant by the same author.
